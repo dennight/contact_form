@@ -1,0 +1,185 @@
+
+:root {
+    --black-alpha: rgba(0,0,0,.5);
+    --white-alpha: rgba(255,255,255,.5);
+    --grey: #AAA;
+    --rose-alpha: rgba(223, 27, 118,.5);
+    --rose: #B2175F;
+    --white: #ffffff;
+    --violet: #502789;
+    --violet-alpha: rgba(114, 57, 193, .5);
+    --orange: rgb(195, 35, 17);
+    --orange-alpha: rgba(230, 108, 15, .5);
+    --blue: #2BB09A;
+    --blue-alpha: rgba(45, 215, 187, .5);
+}
+
+body {
+    background-image: url('call.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;   
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;   
+    background: var(--black-alpha);
+}
+
+input, textarea, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#form {
+    background: var(--white-alpha);
+    text-align: center; 
+    -webkit-box-shadow: 0px 0px 20px 5px var(--grey); 
+            box-shadow: 0px 0px 20px 5px var(--grey); 
+    border-radius: 10px;  
+    width: 45%; 
+    height: 400px;
+    padding: 10px 10px;  
+}
+
+.name { 
+    background-color: var(--rose-alpha);
+    border-bottom: 5px solid var(--rose);
+    color: var(--white);
+    width:300px;
+}
+
+::-webkit-input-placeholder{
+      color: var(--white);
+      font-size: 18px;
+}
+
+::-moz-placeholder{
+      color: var(--white);
+      font-size: 18px;
+}
+
+:-ms-input-placeholder{
+      color: var(--white);
+      font-size: 18px;
+}
+
+::-ms-input-placeholder{
+      color: var(--white);
+      font-size: 18px;
+}
+
+::placeholder{
+      color: var(--white);
+      font-size: 18px;
+}
+.name:hover{
+    background-color: var(--rose-alpha);
+    border-bottom: 5px solid var(--rose);
+    height:30px;
+    width:400px;
+}
+
+.email {
+    background-color: var(--violet-alpha);  
+    border-bottom: 5px solid var(--violet);
+    height:50px;
+    width:300px;    
+}
+.email:hover{
+    background-color:  var(--violet-alpha);
+    border-bottom: 5px solid var(--violet);
+    height:30px;
+    width:380px;
+}
+.message {   
+    background-color: var(--orange-alpha);
+    border-bottom: 5px solid var(--orange);
+    overflow: hidden;
+    height: 100px;  
+    width:300px;
+}
+
+.message:hover{
+    background-color: var(--blue-alpha);
+    border-bottom: 5px solid var(--blue);
+    height: 100px;
+    width:370px;
+}
+
+.animated{
+    display: block;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    -webkit-box-shadow: 0px 0px 25px 2px var(--grey);
+            box-shadow: 0px 0px 25px 2px var(--grey);  
+}  
+
+.submit{
+    border-radius:5px;
+    padding:10px;
+    background-color: var(--blue);  
+    border: none;
+    border-bottom: 5px solid var(--blue); 
+    -webkit-transform: translateY(-120px); 
+        -ms-transform: translateY(-120px); 
+            transform: translateY(-120px); 
+    width:150px;
+    color: var(--white);
+    margin-top: 150px; 
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit:hover{
+    border-bottom: 5px solid var(--blue);  
+    -webkit-box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);  
+            box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+}
+
+@media (max-width: 998px) {
+    #form {
+        width: 90%;
+    }
+}
+
+@media (min-height: 600px), screen and (orientation: landscape) {
+    .container {        
+        height: 100vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+    .name, .email, .message {
+        width: 90%;
+    }
+}
